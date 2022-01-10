@@ -16,13 +16,13 @@ function HeroBG() {
               } 
             }, 
             color: {
-                value: "#aaa",
+                value: "#00ffff",
             },
             shape: {
                 type: "circle",
                 stroke: {
                     width: 0,
-                    color: "#000000"
+                    color: "#00ffff"
                 },
                 polygon: {
                     nb_sides: 5
@@ -55,7 +55,7 @@ function HeroBG() {
             },
             line_linked: {
                 enable: true,
-                color: '#444',
+                color: '#888',
                 opacity: 0.4,
                 distance: 200,
             },

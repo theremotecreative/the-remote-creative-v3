@@ -574,7 +574,7 @@ const BottomButton = styled.div`
     text-align: center;
     margin-top: 35px;
     position: relative;
-    z-index: 10;
+    z-index: 1;
     a {
         font-family: "Poppins";
         padding: 5px 20px;
