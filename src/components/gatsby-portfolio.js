@@ -31,6 +31,33 @@ const GatsbyPortfolio = () => {
 
     const data = useStaticQuery(graphql`
         query {
+            provalusThumb: file(relativePath: { eq: "provalus-tall.jpg" }) {
+                childImageSharp {
+                    gatsbyImageData(
+                      width: 380
+                      placeholder: TRACED_SVG
+                      formats: [AUTO, WEBP, AVIF]
+                    )
+                  }
+            }
+            chronicThumb: file(relativePath: { eq: "chronic-square.jpg" }) {
+                childImageSharp {
+                    gatsbyImageData(
+                        width: 380
+                        placeholder: TRACED_SVG
+                        formats: [AUTO, WEBP, AVIF]
+                      )
+                }
+            }
+            tgbThumb: file(relativePath: { eq: "tgb-square.jpg" }) {
+                childImageSharp {
+                    gatsbyImageData(
+                        width: 380
+                        placeholder: TRACED_SVG
+                        formats: [AUTO, WEBP, AVIF]
+                      )
+                }
+            }
             optomiThumb: file(relativePath: { eq: "optomi-thumb.jpg" }) {
                 childImageSharp {
                     gatsbyImageData(
@@ -97,6 +124,41 @@ const GatsbyPortfolio = () => {
                                 <HoverText>
                                     <h3>Architectural Dynamics</h3>
                                     <p>Architect Portfolio</p>
+                                </HoverText>
+                            </a>
+                        </HoverCopy>
+                    </PortfolioSquare>
+                </RowOne>
+                <RowOne>
+                    <PortfolioSquare>
+                        <ThumbImg image={data.provalusThumb.childImageSharp.gatsbyImageData} alt={"Provalus Thumbnail"}/>
+                        <HoverCopy>
+                            <a href="https://provalus.com/" target="_blank" rel="noopener noreferrer">
+                                <HoverText>
+                                    <h3>Provalus</h3>
+                                    <p>Gatsby.js | Speed and Animation</p>
+                                </HoverText>
+                            </a>
+                        </HoverCopy>
+                    </PortfolioSquare>
+                    <PortfolioSquare>
+                        <ThumbImg image={data.chronicThumb.childImageSharp.gatsbyImageData} alt={"Chronic Conditions Center Thumbnail"}/>
+                        <HoverCopy>
+                            <a href="https://chronicpa.com/" target="_blank" rel="noopener noreferrer">
+                                <HoverText>
+                                    <h3>Chronic Conditions Center</h3>
+                                    <p>Gatsby.js | Fast PageSpeed Performance</p>
+                                </HoverText>
+                            </a>
+                        </HoverCopy>
+                    </PortfolioSquare>
+                    <PortfolioSquare>
+                        <ThumbImg image={data.tgbThumb.childImageSharp.gatsbyImageData} alt={"The TGB Foundation Thumbnail"}/>
+                        <HoverCopy>
+                            <a href="https://thetgbfoundation.org/" target="_blank" rel="noopener noreferrer">
+                                <HoverText>
+                                    <h3>The TGB Foundation</h3>
+                                    <p>Gatsby.js with WordPress CMS</p>
                                 </HoverText>
                             </a>
                         </HoverCopy>
