@@ -26,7 +26,7 @@ const NotFoundPage = () => {
 
   return(
     <Layout>
-      <Seo 
+      {/* <Seo 
         title={"404: Not Found | The Remote Creative"} 
         description={"Modern Web Development with WordPress and Gatsby.js. Building lightning fast web apps with the latest react libraries and content management systems."}
         keywords={"Gatsby.js, WordPress, GSAP, GreenSock, Modern Web Development, Fast Websites, Headless CMS, A/B Testing, Split Testing"}
@@ -34,7 +34,7 @@ const NotFoundPage = () => {
         ogDescription={"Modern Web Development with WordPress and Gatsby.js. Building lightning fast web apps with the latest react libraries and content management systems."}
         twitterTitle={"404: Not Found | The Remote Creative"} 
         twitterDescription={"Modern Web Development with WordPress and Gatsby.js. Building lightning fast web apps with the latest react libraries and content management systems."}
-        />
+        /> */}
         <MainSection>
           <div>
             <h1>404: Not Found</h1>

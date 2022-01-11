@@ -30,7 +30,7 @@ const IndexPage = () => {
 
   return(
     <Layout>
-      <Seo 
+      {/* <Seo 
         title={"Home | The Remote Creative"} 
         description={"Modern Web Development with WordPress and Gatsby.js. Building lightning fast web apps with the latest react libraries and content management systems."}
         keywords={"Gatsby.js, WordPress, GSAP, GreenSock, Modern Web Development, Fast Websites, Headless CMS, A/B Testing, Split Testing"}
@@ -38,7 +38,7 @@ const IndexPage = () => {
         ogDescription={"Modern Web Development with WordPress and Gatsby.js. Building lightning fast web apps with the latest react libraries and content management systems."}
         twitterTitle={"Home | The Remote Creative"} 
         twitterDescription={"Modern Web Development with WordPress and Gatsby.js. Building lightning fast web apps with the latest react libraries and content management systems."}
-        />
+        /> */}
       <HeroSection />
       <SectionTwo />
       <PortfolioSection />

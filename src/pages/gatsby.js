@@ -29,7 +29,7 @@ const GatsbyPage = () => {
 
   return(
     <SubLayout>
-      <Seo 
+      {/* <Seo 
         title={"Gatsby.js Website Development | The Remote Creative"} 
         description={"Combine the Gatsby.js framework with the WordPress dashboard to create a lightning fast, App-like, and secure website."}
         keywords={"Gatsby.js, WordPress, GSAP, GreenSock, Modern Web Development, Fast Websites, Headless CMS, A/B Testing, Split Testing"}
@@ -37,7 +37,7 @@ const GatsbyPage = () => {
         ogDescription={"Combine the Gatsby.js framework with the WordPress dashboard to create a lightning fast, App-like, and secure website."}
         twitterTitle={"Gatsby.js Website Development | The Remote Creative"} 
         twitterDescription={"Combine the Gatsby.js framework with the WordPress dashboard to create a lightning fast, App-like, and secure website."}
-      />
+      /> */}
       <GatsbyOne/>
       <GatsbyTwo/>
       <GatsbyPortfolio/>
