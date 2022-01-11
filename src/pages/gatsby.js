@@ -35,10 +35,8 @@ const GatsbyPage = () => {
         keywords={"Gatsby.js, WordPress, GSAP, GreenSock, Modern Web Development, Fast Websites, Headless CMS, A/B Testing, Split Testing"}
         ogTitle={"Gatsby.js Website Development | The Remote Creative"} 
         ogDescription={"Combine the Gatsby.js framework with the WordPress dashboard to create a lightning fast, App-like, and secure website."}
-        ogImage={data.jasonThumb.childImageSharp.gatsbyImageData.fluid}
         twitterTitle={"Gatsby.js Website Development | The Remote Creative"} 
         twitterDescription={"Combine the Gatsby.js framework with the WordPress dashboard to create a lightning fast, App-like, and secure website."}
-        twitterImage={data.jasonThumb.childImageSharp.gatsbyImageData.fluid}
       />
       <GatsbyOne/>
       <GatsbyTwo/>

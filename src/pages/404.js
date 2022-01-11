@@ -31,10 +31,8 @@ const NotFoundPage = () => {
         keywords={"Gatsby.js, WordPress, GSAP, GreenSock, Modern Web Development, Fast Websites, Headless CMS, A/B Testing, Split Testing"}
         ogTitle={"404: Not Found | The Remote Creative"} 
         ogDescription={"Modern Web Development with WordPress and Gatsby.js. Building lightning fast web apps with the latest react libraries and content management systems."}
-        ogImage={data.jasonThumb.childImageSharp.gatsbyImageData.fluid}
         twitterTitle={"404: Not Found | The Remote Creative"} 
         twitterDescription={"Modern Web Development with WordPress and Gatsby.js. Building lightning fast web apps with the latest react libraries and content management systems."}
-        twitterImage={data.jasonThumb.childImageSharp.gatsbyImageData.fluid}
         />
       <h1>404: Not Found</h1>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
