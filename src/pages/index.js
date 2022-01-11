@@ -33,7 +33,7 @@ const IndexPage = () => {
       <Seo 
         title={"Home | The Remote Creative"} 
         description={"Modern Web Development with WordPress and Gatsby.js. Building lightning fast web apps with the latest react libraries and content management systems."}
-        keywords={"Gatsby.js, WordPress, GSAP, GreenSock, Modern Web Development, Fast Websites, Headless CMS, A/B Testing, Split Testing"}
+        keywords={"gatsby website development, Gatsby.js, WordPress, GSAP, GreenSock, Modern Web Development, Fast Websites, Headless CMS, A/B Testing, Split Testing"}
         ogTitle={"Home | The Remote Creative"} 
         ogDescription={"Modern Web Development with WordPress and Gatsby.js. Building lightning fast web apps with the latest react libraries and content management systems."}
         ogImage={data.jasonThumb.childImageSharp.fluid}
