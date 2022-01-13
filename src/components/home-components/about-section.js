@@ -74,6 +74,7 @@ const AboutSection = () => {
                         <p class="lang">PHP</p>
                         <p class="frame">React</p>
                         <p class="frame">Gatsby.js</p>
+                        <p class="frame">GreenSock</p>
                         <p class="cms">WordPress</p>
                         <p class="cms">WooCommerce</p>
                         <p class="cms">Squarespace</p>
@@ -114,7 +115,7 @@ const ContactRow = styled.div`
     align-items: center;
     opacity: 0;
     position: relative;
-    z-index: 10;
+    z-index: 1;
     @media(max-width:1100px) {
         flex-wrap: wrap;
         opacity: 1;
@@ -178,6 +179,7 @@ const Toolkit = styled.div`
         margin-right: 15px;
         margin-bottom: 15px;
         color: #bec8b7;
+        transition-duration: .3s;
         &.lang {
             background-color: #333;
         }
@@ -195,6 +197,10 @@ const Toolkit = styled.div`
         }
         &.proj {
             background-color: #555;
+        }
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0px 9px 12px rgb(0 255 255 / 45%);
         }
     }
 `
