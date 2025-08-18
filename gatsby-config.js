@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `The Remote Creative`,
-    description: `Modern Web Development with WordPress and Gatsby.js. Building lightning fast web apps with the latest react libraries and content management systems.`,
-    keywords: `Gatsby.js, WordPress, GSAP, GreenSock, Modern Web Development, Fast Websites, Headless CMS, A/B Testing, Split Testing`,
+    description: `AI development and consulting services. Building intelligent web apps with modern technologies.`,
+    keywords: `AI development, AI consulting, machine learning, automation, web development, WordPress`,
     author: `@theremotecreative`,
     siteUrl: `https://theremotecreative.com`,
   },

@@ -44,9 +44,9 @@ class SubHeader extends Component {
                 </li>
                 <li>
                 <Link
-                  to="/gatsby/"
+                  to="/#section_two_bg"
                 >
-                  Gatsby.js
+                  AI Services
                 </Link>
                 </li>
                 <li>
@@ -80,9 +80,9 @@ class SubHeader extends Component {
                 </li>
                 <li>
                 <Link
-                  to="/gatsby/"
+                  to="/#section_two_bg"
                 >
-                  Gatsby.js
+                  AI Services
                 </Link>
                 </li>
                 <li>

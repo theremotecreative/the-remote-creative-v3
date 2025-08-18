@@ -160,7 +160,7 @@ const HomePortfolio = () => {
                             <a href="https://optomi.com/" target="_blank" rel="noopener noreferrer">
                                 <HoverText>
                                     <h3>Optomi</h3>
-                                    <p>Gatsby.js with WordPress CMS</p>
+                                    <p>AI & WordPress CMS</p>
                                 </HoverText>
                             </a>
                         </HoverCopy>
@@ -173,7 +173,7 @@ const HomePortfolio = () => {
                             <a href="https://provalus.com/" target="_blank" rel="noopener noreferrer">
                                 <HoverText>
                                     <h3>Provalus</h3>
-                                    <p>Gatsby.js | Speed and Animation</p>
+                                    <p>AI-Powered App | Speed and Animation</p>
                                 </HoverText>
                             </a>
                         </HoverCopy>
@@ -188,7 +188,7 @@ const HomePortfolio = () => {
                                 <a href="https://wlion.com/" target="_blank" rel="noopener noreferrer">
                                     <HoverText>
                                         <h3>White Lion</h3>
-                                        <p>Gatsby.js with WordPress CMS</p>
+                                        <p>AI & WordPress CMS</p>
                                     </HoverText>
                                 </a>
                             </HoverCopy>
@@ -224,7 +224,7 @@ const HomePortfolio = () => {
                             <a href="https://chronicpa.com/" target="_blank" rel="noopener noreferrer">
                                 <HoverText>
                                     <h3>Chronic Conditions Center</h3>
-                                    <p>Gatsby.js | Fast PageSpeed Performance</p>
+                                    <p>AI-Powered App | Fast PageSpeed Performance</p>
                                 </HoverText>
                             </a>
                         </HoverCopy>
