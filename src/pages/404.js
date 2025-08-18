@@ -18,15 +18,14 @@ const NotFoundPage = () => (
 
 export const Head = () => {
   const data = useStaticQuery(graphql`
-    query {
-        jasonThumb: file(relativePath: { eq: "Jason-Vanderheyden.jpg" }) {
-            childImageSharp {
-                gatsbyImageData(
-                  width: 800
-                  placeholder: TRACED_SVG
-                  formats: [AUTO, WEBP, AVIF]
-                )
-              }
+    {
+      jasonThumb: file(relativePath: { eq: "Jason-Vanderheyden.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 800
+            placeholder: TRACED_SVG
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
     }
