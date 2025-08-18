@@ -35,13 +35,13 @@ export const Head = () => {
     <Layout>
       <Seo 
         title={"404: Not Found | The Remote Creative"} 
-        description={"Modern Web Development with WordPress and Gatsby.js. Building lightning fast web apps with the latest react libraries and content management systems."}
-        keywords={"Gatsby.js, WordPress, GSAP, GreenSock, Modern Web Development, Fast Websites, Headless CMS, A/B Testing, Split Testing"}
+        description={"AI development and consulting services. Building intelligent web apps with modern technologies."}
+        keywords={"AI development, AI consulting, machine learning, automation, web development"}
         ogTitle={"404: Not Found | The Remote Creative"} 
-        ogDescription={"Modern Web Development with WordPress and Gatsby.js. Building lightning fast web apps with the latest react libraries and content management systems."}
+        ogDescription={"AI development and consulting services. Building intelligent web apps with modern technologies."}
         ogImage={data.jasonThumb.childImageSharp.gatsbyImageData}
         twitterTitle={"404: Not Found | The Remote Creative"} 
-        twitterDescription={"Modern Web Development with WordPress and Gatsby.js. Building lightning fast web apps with the latest react libraries and content management systems."}
+        twitterDescription={"AI development and consulting services. Building intelligent web apps with modern technologies."}
         twitterImage={data.jasonThumb.childImageSharp.gatsbyImageData}
         />
         <MainSection>

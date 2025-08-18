@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "AI development and consulting services website for The Remote Creative",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
@@ -35,7 +35,8 @@
     "prettier": "^2.4.1"
   },
   "keywords": [
-    "gatsby"
+    "ai",
+    "consulting"
   ],
   "license": "0BSD",
   "scripts": {

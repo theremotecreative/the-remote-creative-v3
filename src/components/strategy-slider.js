@@ -28,7 +28,7 @@ class StrategySlider extends Component {
                 <StrategySlide>
                     <SiWordpress size={72}/>
                     <h4>WordPress Headless CMS</h4>
-                    <p>Manage content with all of the best WordPress tools, like the user friendly dashboard, page builders, Advanced Custom Fields, and Yoast SEO. Combine with <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener noreferrer">Gatsby.js</a> for a blazing fast frontend web application.</p>
+                    <p>Manage content with all of the best WordPress tools, like the user friendly dashboard, page builders, Advanced Custom Fields, and Yoast SEO. Integrate AI services for intelligent, dynamic experiences.</p>
                 </StrategySlide>
                 <StrategySlide>
                     <IoRocket size={72}/>
