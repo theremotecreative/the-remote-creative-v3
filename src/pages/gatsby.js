@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from "gatsby"
 
 import SubLayout from "../components/sub-layout"
 import Seo from "../components/seo"
@@ -8,8 +8,18 @@ import GatsbyTwo from "../components/gatsby-two"
 import GatsbyPortfolio from "../components/gatsby-portfolio"
 import GatsbyContact from "../components/gatsby-contact"
 
-const GatsbyPage = () => {
+const GatsbyPage = () => (
+  <SubLayout>
+    <GatsbyOne />
+    <GatsbyTwo />
+    <GatsbyPortfolio />
+    <GatsbyContact />
+  </SubLayout>
+)
 
+export default GatsbyPage
+
+export const Head = () => {
   const data = useStaticQuery(graphql`
     query {
         jasonThumb: file(relativePath: { eq: "Jason-Vanderheyden.jpg" }) {
@@ -21,6 +31,7 @@ const GatsbyPage = () => {
                 )
               }
         }
+      }
     }
   `)
 
@@ -43,7 +54,4 @@ const GatsbyPage = () => {
       <GatsbyContact/>
     </SubLayout>
   );
-  
 }
-
-export default GatsbyPage
