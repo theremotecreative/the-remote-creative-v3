@@ -22,40 +22,36 @@ export default GatsbyPage
 export const Head = () => {
   const data = useStaticQuery(graphql`
     query {
-      jasonThumb: file(relativePath: { eq: "Jason-Vanderheyden.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 800
-            placeholder: TRACED_SVG
-            formats: [AUTO, WEBP, AVIF]
-          )
-          fluid(maxWidth: 800, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+        jasonThumb: file(relativePath: { eq: "Jason-Vanderheyden.jpg" }) {
+            childImageSharp {
+                gatsbyImageData(
+                  width: 800
+                  placeholder: TRACED_SVG
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
         }
       }
     }
   `)
 
-  return (
-    <Seo
-      title={"Gatsby.js Website Development | The Remote Creative"}
-      description={
-        "Gatsby website development. Combine the Gatsby.js framework with the WordPress dashboard to create a lightning fast, App-like, and secure website."
-      }
-      keywords={
-        "gatsby website development, Gatsby.js, WordPress, GSAP, GreenSock, Modern Web Development, Fast Websites, Headless CMS, A/B Testing, Split Testing"
-      }
-      ogTitle={"Gatsby.js Website Development | The Remote Creative"}
-      ogDescription={
-        "Combine the Gatsby.js framework with the WordPress dashboard to create a lightning fast, App-like, and secure website."
-      }
-      ogImage={data.jasonThumb.childImageSharp.fluid}
-      twitterTitle={"Gatsby.js Website Development | The Remote Creative"}
-      twitterDescription={
-        "Combine the Gatsby.js framework with the WordPress dashboard to create a lightning fast, App-like, and secure website."
-      }
-      twitterImage={data.jasonThumb.childImageSharp.fluid}
-    />
-  )
+  return(
+    <SubLayout>
+      <Seo 
+        title={"Gatsby.js Website Development | The Remote Creative"} 
+        description={"Gatsby website development. Combine the Gatsby.js framework with the WordPress dashboard to create a lightning fast, App-like, and secure website."}
+        keywords={"gatsby website development, Gatsby.js, WordPress, GSAP, GreenSock, Modern Web Development, Fast Websites, Headless CMS, A/B Testing, Split Testing"}
+        ogTitle={"Gatsby.js Website Development | The Remote Creative"} 
+        ogDescription={"Combine the Gatsby.js framework with the WordPress dashboard to create a lightning fast, App-like, and secure website."}
+        ogImage={data.jasonThumb.childImageSharp.gatsbyImageData}
+        twitterTitle={"Gatsby.js Website Development | The Remote Creative"} 
+        twitterDescription={"Combine the Gatsby.js framework with the WordPress dashboard to create a lightning fast, App-like, and secure website."}
+        twitterImage={data.jasonThumb.childImageSharp.gatsbyImageData}
+      />
+      <GatsbyOne/>
+      <GatsbyTwo/>
+      <GatsbyPortfolio/>
+      <GatsbyContact/>
+    </SubLayout>
+  );
 }

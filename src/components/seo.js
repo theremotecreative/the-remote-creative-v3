@@ -24,16 +24,25 @@ function SEO({ lang, meta, pathname, title, description, keywords, ogTitle, ogDe
   const metaKeywords = keywords || site.siteMetadata.keywords
   const og_title = ogTitle || site.siteMetadata.title
   const og_description = ogDescription || site.siteMetadata.description
-  const og_image =
-    ogMetaImage && ogMetaImage.src
-      ? `${site.siteMetadata.siteUrl}${ogMetaImage.src}`
-      : null
+  const getImageMeta = image => {
+    if (!image || !image.images || !image.images.fallback) {
+      return null
+    }
+    const { fallback } = image.images
+    return {
+      src: `${site.siteMetadata.siteUrl}${fallback.src}`,
+      width: fallback.width || image.width,
+      height: fallback.height || image.height,
+    }
+  }
+
+  const ogImage = getImageMeta(ogMetaImage)
+  const twitterImage = getImageMeta(twitterMetaImage)
+
+  const og_image = ogImage ? ogImage.src : null
   const twitter_title = twitterTitle || site.siteMetadata.title
   const twitter_description = twitterDescription || site.siteMetadata.description
-  const twitter_image =
-    twitterMetaImage && twitterMetaImage.src
-      ? `${site.siteMetadata.siteUrl}${twitterMetaImage.src}`
-      : null
+  const twitter_image = twitterImage ? twitterImage.src : null
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
 
   return (
@@ -96,7 +105,7 @@ function SEO({ lang, meta, pathname, title, description, keywords, ogTitle, ogDe
         },
       ]
       .concat(
-        ogMetaImage
+        ogImage
           ? [
               {
                 property: "og:image",
@@ -104,11 +113,11 @@ function SEO({ lang, meta, pathname, title, description, keywords, ogTitle, ogDe
               },
               {
                 property: "og:image:width",
-                content: ogMetaImage.width,
+                content: ogImage.width,
               },
               {
                 property: "og:image:height",
-                content: ogMetaImage.height,
+                content: ogImage.height,
               },
               {
                 name: "twitter:card",
@@ -123,7 +132,7 @@ function SEO({ lang, meta, pathname, title, description, keywords, ogTitle, ogDe
             ]
       )
       .concat(
-        twitterMetaImage
+        twitterImage
           ? [
               {
                 property: "twitter:image",
@@ -131,11 +140,11 @@ function SEO({ lang, meta, pathname, title, description, keywords, ogTitle, ogDe
               },
               {
                 property: "twitter:image:width",
-                content: twitterMetaImage.width,
+                content: twitterImage.width,
               },
               {
                 property: "twitter:image:height",
-                content: twitterMetaImage.height,
+                content: twitterImage.height,
               },
               {
                 name: "twitter:card",
@@ -167,18 +176,10 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired,
   ogTitle: PropTypes.string.isRequired,
   ogDescription: PropTypes.string,
-  ogImage: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    height: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-  }),
+  ogImage: PropTypes.object,
   twitterTitle: PropTypes.string.isRequired,
   twitterDescription: PropTypes.string,
-  twitterImage: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    height: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-  }),
+  twitterImage: PropTypes.object,
   pathname: PropTypes.string,
 }
 
