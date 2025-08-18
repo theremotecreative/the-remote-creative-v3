@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -9,8 +9,18 @@ import SectionTwo from "../components/home-components/section-two"
 import PortfolioSection from "../components/home-components/portfolio-section"
 import AboutSection from "../components/home-components/about-section"
 
-const IndexPage = () => {
+const IndexPage = () => (
+  <Layout>
+    <HeroSection />
+    <SectionTwo />
+    <PortfolioSection />
+    <AboutSection />
+  </Layout>
+)
 
+export default IndexPage
+
+export const Head = () => {
   const data = useStaticQuery(graphql`
     {
       jasonThumb: file(relativePath: { eq: "Jason-Vanderheyden.jpg" }) {
@@ -44,7 +54,4 @@ const IndexPage = () => {
       <AboutSection />
     </Layout>
   );
-
 }
-
-export default IndexPage

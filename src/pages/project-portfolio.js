@@ -1,12 +1,19 @@
 import React from "react"
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from "gatsby"
 
 import SubLayout from "../components/sub-layout"
 import Seo from "../components/seo"
 import FeaturedPortfolio from "../components/featured-portfolio"
 
-const ProjectPage = () => {
+const ProjectPage = () => (
+  <SubLayout>
+    <FeaturedPortfolio />
+  </SubLayout>
+)
 
+export default ProjectPage
+
+export const Head = () => {
   const data = useStaticQuery(graphql`
     {
       jasonThumb: file(relativePath: { eq: "Jason-Vanderheyden.jpg" }) {
@@ -37,7 +44,4 @@ const ProjectPage = () => {
       <FeaturedPortfolio/>
     </SubLayout>
   );
-
 }
-
-export default ProjectPage

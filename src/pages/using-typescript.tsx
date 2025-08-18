@@ -13,7 +13,6 @@ type DataProps = {
 
 const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
   <Layout>
-    <Seo title="Using TypeScript" />
     <h1>Gatsby supports TypeScript by default!</h1>
     <p>
       This means that you can create and write <em>.ts/.tsx</em> files for your
@@ -40,6 +39,8 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
 )
 
 export default UsingTypescript
+
+export const Head = () => <Seo title="Using TypeScript" />
 
 export const query = graphql`
   {
