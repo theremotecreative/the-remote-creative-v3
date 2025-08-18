@@ -19,9 +19,6 @@ const GatsbyPage = () => {
                   placeholder: TRACED_SVG
                   formats: [AUTO, WEBP, AVIF]
                 )
-                fluid(maxWidth: 800, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
               }
         }
     }
@@ -35,10 +32,10 @@ const GatsbyPage = () => {
         keywords={"gatsby website development, Gatsby.js, WordPress, GSAP, GreenSock, Modern Web Development, Fast Websites, Headless CMS, A/B Testing, Split Testing"}
         ogTitle={"Gatsby.js Website Development | The Remote Creative"} 
         ogDescription={"Combine the Gatsby.js framework with the WordPress dashboard to create a lightning fast, App-like, and secure website."}
-        ogImage={data.jasonThumb.childImageSharp.fluid}
+        ogImage={data.jasonThumb.childImageSharp.gatsbyImageData}
         twitterTitle={"Gatsby.js Website Development | The Remote Creative"} 
         twitterDescription={"Combine the Gatsby.js framework with the WordPress dashboard to create a lightning fast, App-like, and secure website."}
-        twitterImage={data.jasonThumb.childImageSharp.fluid}
+        twitterImage={data.jasonThumb.childImageSharp.gatsbyImageData}
       />
       <GatsbyOne/>
       <GatsbyTwo/>
