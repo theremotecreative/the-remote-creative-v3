@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `The Remote Creative`,
-    description: `AI development and consulting services. Building intelligent web apps with modern technologies.`,
-    keywords: `AI development, AI consulting, machine learning, automation, web development, WordPress`,
+    description: `Senior developers with 10+ years of experience delivering AI-enhanced web apps, workshops, and project management services.`,
+    keywords: `senior developers, AI development, AI consulting, machine learning, automation, web development, WordPress, React, project management, AI workshops, web team leadership`,
     author: `@theremotecreative`,
     siteUrl: `https://theremotecreative.com`,
   },
@@ -38,10 +38,10 @@ module.exports = {
       options: {
         trackingId: `UA-139848739-1`,
         head: true,
-      }
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-     `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }

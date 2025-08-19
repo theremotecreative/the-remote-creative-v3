@@ -1,6 +1,6 @@
 # The Remote Creative
 
-The Remote Creative provides AI development and consulting services, helping businesses build intelligent solutions and modern web applications.
+The Remote Creative is a team of senior developers with over a decade of experience leveraging AI to build intelligent solutions, lead workshops, and manage complex web projects.
 
 ## Getting Started
 

@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "AI development and consulting services website for The Remote Creative",
+  "description": "Website for senior developers with 10+ years experience delivering AI-enhanced solutions, workshops, and project management at The Remote Creative",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
@@ -36,7 +36,10 @@
   },
   "keywords": [
     "ai",
-    "consulting"
+    "consulting",
+    "AI workshops",
+    "project management",
+    "web development"
   ],
   "license": "0BSD",
   "scripts": {
