@@ -65,7 +65,7 @@ const AboutSection = () => {
                 <CopyCol>
                     <h2>About <br/>
                         <span>the creative</span></h2>
-                    <p>Jason has over 5 years of experience working remotely on various web development projects. He specializes in WordPress and Gatsby.js development. Jason is an Iraq War veteran with a Masters Degree in International Relations, is a self-taught coder, and is the founder and CEO of The Remote Creative.</p>
+                    <p>Jason has over 5 years of experience working remotely on various development projects. He specializes in AI development and consulting, leveraging WordPress and modern web technologies. Jason is an Iraq War veteran with a Masters Degree in International Relations, is a self-taught coder, and is the founder and CEO of The Remote Creative.</p>
                     <p>Toolkit:</p>
                     <Toolkit>
                         <p class="lang">HTML</p>
@@ -73,7 +73,7 @@ const AboutSection = () => {
                         <p class="lang">JavaScript</p>
                         <p class="lang">PHP</p>
                         <p class="frame">React</p>
-                        <p class="frame">Gatsby.js</p>
+                        <p class="frame">TensorFlow</p>
                         <p class="frame">GreenSock</p>
                         <p class="cms">WordPress</p>
                         <p class="cms">WooCommerce</p>

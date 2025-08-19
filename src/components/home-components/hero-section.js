@@ -2,18 +2,16 @@ import * as React from "react"
 import styled from "styled-components"
 
 import ParticleBG from "./hero-bg"
-import HeroDevice from "./hero-device"
 import HeroAnimation from "./hero-animation"
 
 const HeroSection = () => (
     <HeroMain id="hero_main_bg" className="one-bg-change">
         <ParticleBG/>
         <div class="hero-content">
-            <h1>Modern Web Development with WordPress and Gatsby.js</h1>
-            <p>Building lightning fast web apps with the latest react libraries and content management systems</p>
+            <h1>AI Development and Consulting Services</h1>
+            <p>Building intelligent solutions with modern AI technologies and web platforms</p>
         </div>
-        {/* <HeroDevice/> */}
-        {/* <HeroAnimation/> */}
+                {/* <HeroAnimation/> */}
     </HeroMain>
   )
   
