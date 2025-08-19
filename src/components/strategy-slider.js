@@ -27,8 +27,8 @@ class StrategySlider extends Component {
               <Slider {...settings}>
                 <StrategySlide>
                     <SiWordpress size={72}/>
-                    <h4>WordPress Headless CMS</h4>
-                    <p>Manage content with all of the best WordPress tools, like the user friendly dashboard, page builders, Advanced Custom Fields, and Yoast SEO. Integrate AI services for intelligent, dynamic experiences.</p>
+                    <h4>WordPress Dev with Codex</h4>
+                    <p>Write and customize WordPress sites using the Codex tool for faster, code-assisted development.</p>
                 </StrategySlide>
                 <StrategySlide>
                     <IoRocket size={72}/>
