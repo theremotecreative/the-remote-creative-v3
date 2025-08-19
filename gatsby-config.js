@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `The Remote Creative`,
-    description: `AI development and consulting services. Building intelligent web apps with modern technologies.`,
-    keywords: `AI development, AI consulting, machine learning, automation, web development, WordPress`,
+    description: `Senior developers delivering AI-enhanced web apps and consulting services.`,
+    keywords: `senior developers, AI development, AI consulting, machine learning, automation, web development, WordPress`,
     author: `@theremotecreative`,
     siteUrl: `https://theremotecreative.com`,
   },
