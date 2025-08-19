@@ -65,7 +65,7 @@ const AboutSection = () => {
                 <CopyCol>
                     <h2>About <br/>
                         <span>the creative</span></h2>
-                    <p>Jason has over 5 years of experience working remotely on various development projects. He specializes in AI development and consulting, leveraging WordPress and modern web technologies. Jason is an Iraq War veteran with a Masters Degree in International Relations, is a self-taught coder, and is the founder and CEO of The Remote Creative.</p>
+                    <p>Jason is a senior developer with over 5 years of remote experience across diverse projects. He pairs deep development expertise with AI-driven consulting, leveraging WordPress and modern web technologies. Jason is an Iraq War veteran with a Masters Degree in International Relations, is a self-taught coder, and is the founder and CEO of The Remote Creative.</p>
                     <p>Toolkit:</p>
                     <Toolkit>
                         <p class="lang">HTML</p>

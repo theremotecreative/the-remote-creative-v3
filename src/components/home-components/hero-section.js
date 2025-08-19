@@ -8,8 +8,8 @@ const HeroSection = () => (
     <HeroMain id="hero_main_bg" className="one-bg-change">
         <ParticleBG/>
         <div class="hero-content">
-            <h1>AI Development and Consulting Services</h1>
-            <p>Building intelligent solutions with modern AI technologies and web platforms</p>
+            <h1>Senior Developers Supercharged with AI</h1>
+            <p>We combine years of engineering experience with cutting-edge artificial intelligence to build more.</p>
         </div>
                 {/* <HeroAnimation/> */}
     </HeroMain>
@@ -26,11 +26,11 @@ const HeroMain = styled.section`
         max-width: 960px;
         width: 100%;
         margin: 0 auto;
-        margin-left: 15%;
         margin-bottom: 0px;
         padding: 0 30px;
         z-index: 1;
         transition-duration: .5s;
+        text-align: center;
         h1 {
             font-family: Roboto;
             font-weight: 900;
@@ -51,14 +51,10 @@ const HeroMain = styled.section`
             font-size: 36px;
             line-height: 1.3;
             max-width: 500px;
+            margin: 0 auto;
             color: #fff;
             transform: translateZ(60px);
             text-shadow: 1px 1px 2px rgba(0,0,0,.5);
-        }
-    }
-    @media(max-width:1160px) {
-        .hero-content {
-            margin-left: auto;
         }
     }
     @media(max-width:960px) {
@@ -85,7 +81,7 @@ const HeroMain = styled.section`
             }
         }
     }
-  
+
 `
-  
+
 export default HeroSection

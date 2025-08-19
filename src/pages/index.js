@@ -37,15 +37,15 @@ export const Head = () => {
 
   return(
     <Layout>
-      <Seo 
-        title={"Home | The Remote Creative"} 
-        description={"AI development and consulting services. Building intelligent web apps with modern technologies."}
-        keywords={"AI development, AI consulting, machine learning, automation, web development"}
-        ogTitle={"Home | The Remote Creative"} 
-        ogDescription={"AI development and consulting services. Building intelligent web apps with modern technologies."}
+      <Seo
+        title={"Home | The Remote Creative"}
+        description={"Senior developers delivering AI‑enhanced web and app solutions."}
+        keywords={"senior developers, AI development, AI consulting, machine learning, automation, web development"}
+        ogTitle={"Home | The Remote Creative"}
+        ogDescription={"Senior developers delivering AI‑enhanced web and app solutions."}
         ogImage={data.jasonThumb.childImageSharp.gatsbyImageData}
-        twitterTitle={"Home | The Remote Creative"} 
-        twitterDescription={"AI development and consulting services. Building intelligent web apps with modern technologies."}
+        twitterTitle={"Home | The Remote Creative"}
+        twitterDescription={"Senior developers delivering AI‑enhanced web and app solutions."}
         twitterImage={data.jasonThumb.childImageSharp.gatsbyImageData}
         />
       <HeroSection />

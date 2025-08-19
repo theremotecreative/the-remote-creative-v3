@@ -39,8 +39,8 @@ const SectionTwo = () => {
                 <StrategySlider/>
             </div>
             <div class="right-col">
-                <h2>AI Strategies for 2025</h2>
-                <p>At The Remote Creative, we're always learning the latest AI techniques to maintain an emphasis on performance, speed, responsiveness, and analytics. These are some of our favorite tools to ensure our solutions follow the most recent trends in intelligent development.</p>
+                <h2>AI Strategies from Seasoned Developers</h2>
+                <p>Our senior devs blend deep experience with the latest AI techniques to deliver performance, speed, responsiveness, and analytics. These are some of the tools we use to keep every solution on the cutting edge.</p>
                 <p class="custom-button"><a href="#home_contact_row_one">Contact Us to Learn More</a></p>
             </div>
         </div>
