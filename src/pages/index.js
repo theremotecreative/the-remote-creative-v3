@@ -35,23 +35,31 @@ export const Head = () => {
     }
   `)
 
-  return(
+  return (
     <Layout>
       <Seo
         title={"Home | The Remote Creative"}
-        description={"Senior developers delivering AI‑enhanced web and app solutions."}
-        keywords={"senior developers, AI development, AI consulting, machine learning, automation, web development"}
+        description={
+          "Senior developers delivering AI‑enhanced WordPress integrations and web app solutions."
+        }
+        keywords={
+          "senior developers, AI development, AI consulting, machine learning, automation, web development, WordPress AI"
+        }
         ogTitle={"Home | The Remote Creative"}
-        ogDescription={"Senior developers delivering AI‑enhanced web and app solutions."}
+        ogDescription={
+          "Senior developers delivering AI‑enhanced WordPress integrations and web app solutions."
+        }
         ogImage={data.jasonThumb.childImageSharp.gatsbyImageData}
         twitterTitle={"Home | The Remote Creative"}
-        twitterDescription={"Senior developers delivering AI‑enhanced web and app solutions."}
+        twitterDescription={
+          "Senior developers delivering AI‑enhanced WordPress integrations and web app solutions."
+        }
         twitterImage={data.jasonThumb.childImageSharp.gatsbyImageData}
-        />
+      />
       <HeroSection />
       <SectionTwo />
       <PortfolioSection />
       <AboutSection />
     </Layout>
-  );
+  )
 }
