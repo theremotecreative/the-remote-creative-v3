@@ -59,7 +59,7 @@ const HeroSection = () => {
                     <p>We combine years of engineering experience with cutting-edge artificial intelligence to build more.</p>
                 </div>
                 <div className="hero-form">
-                    <HeroForm onSubmit={handleSubmit}>
+                    <HeroFormWrapper onSubmit={handleSubmit}>
                         <div className="form-header">
                             <h2>Tell us about your project</h2>
                             <p>Share your email and a quick project summary and we will follow up with next steps.</p>
@@ -99,7 +99,7 @@ const HeroSection = () => {
                         </button>
                         {status === "success" && <p className="form-success">Thanks! We'll reach out shortly.</p>}
                         {errorMessage && <p className="form-error">{errorMessage}</p>}
-                    </HeroForm>
+                    </HeroFormWrapper>
                 </div>
             </div>
             {/* <HeroAnimation/> */}
@@ -107,123 +107,7 @@ const HeroSection = () => {
     )
 }
 
-const HeroMain = styled.section`
-    background: #030e3b;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    .hero-inner {
-        position: relative;
-        max-width: 1200px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 30px;
-        z-index: 1;
-        display: grid;
-        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-        grid-template-areas: "copy form";
-        gap: 32px;
-        align-items: center;
-    }
-    .hero-content {
-        grid-area: copy;
-        transition-duration: .5s;
-        text-align: left;
-        max-width: 600px;
-        h1 {
-            font-family: Roboto;
-            font-weight: 900;
-            font-size: 72px;
-            line-height: 1.2;
-            color: #fff;
-            max-width: 960px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,.5);
-            transform: translateZ(60px);
-            transition-duration: .3s;
-            &:hover {
-                transform: translateZ(120px);
-            }
-        }
-        p {
-            font-family: Poppins;
-            font-weight: 400;
-            font-size: 36px;
-            line-height: 1.3;
-            max-width: 520px;
-            margin: 12px 0 0 0;
-            color: #fff;
-            transform: translateZ(60px);
-            text-shadow: 1px 1px 2px rgba(0,0,0,.5);
-        }
-    }
-    .hero-form {
-        grid-area: form;
-        display: flex;
-        justify-content: flex-end;
-    }
-    .hero-form ${HeroForm} {
-        width: 100%;
-        max-width: 520px;
-    }
-    @media(max-width:960px) {
-        height: auto;
-        padding: 80px 0;
-        .hero-inner {
-            grid-template-columns: 1fr;
-            grid-template-areas:
-                "copy"
-                "form";
-            text-align: center;
-        }
-        .hero-content {
-            text-align: center;
-            h1 {
-                font-size: 56px;
-            }
-            p {
-                margin: 12px auto 0 auto;
-                font-size: 32px;
-            }
-        }
-        .hero-form {
-            justify-content: center;
-        }
-        .hero-form ${HeroForm} {
-            max-width: 560px;
-        }
-    }
-    @media(max-width:767px) {
-        height: auto;
-        padding: 80px 0;
-        .hero-inner {
-            grid-template-columns: 1fr;
-            grid-template-areas:
-                "copy"
-                "form";
-            text-align: center;
-        }
-        .hero-content {
-            text-align: center;
-            h1 {
-                font-size: 36px;
-            }
-            p {
-                margin: 12px auto 0 auto;
-                font-size: 24px;
-            }
-        }
-        .hero-form {
-            justify-content: center;
-        }
-        .hero-form ${HeroForm} {
-            max-width: 100%;
-        }
-    }
-
-`
-
-const HeroForm = styled.form`
+const HeroFormWrapper = styled.form`
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
@@ -300,6 +184,122 @@ const HeroForm = styled.form`
         font-weight: 600;
         margin: 0;
     }
+`
+
+const HeroMain = styled.section`
+    background: #030e3b;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .hero-inner {
+        position: relative;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 30px;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        grid-template-areas: "copy form";
+        gap: 32px;
+        align-items: center;
+    }
+    .hero-content {
+        grid-area: copy;
+        transition-duration: .5s;
+        text-align: left;
+        max-width: 600px;
+        h1 {
+            font-family: Roboto;
+            font-weight: 900;
+            font-size: 72px;
+            line-height: 1.2;
+            color: #fff;
+            max-width: 960px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+            transform: translateZ(60px);
+            transition-duration: .3s;
+            &:hover {
+                transform: translateZ(120px);
+            }
+        }
+        p {
+            font-family: Poppins;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 1.3;
+            max-width: 520px;
+            margin: 12px 0 0 0;
+            color: #fff;
+            transform: translateZ(60px);
+            text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+        }
+    }
+    .hero-form {
+        grid-area: form;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .hero-form ${HeroFormWrapper} {
+        width: 100%;
+        max-width: 520px;
+    }
+    @media(max-width:960px) {
+        height: auto;
+        padding: 80px 0;
+        .hero-inner {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "copy"
+                "form";
+            text-align: center;
+        }
+        .hero-content {
+            text-align: center;
+            h1 {
+                font-size: 56px;
+            }
+            p {
+                margin: 12px auto 0 auto;
+                font-size: 32px;
+            }
+        }
+        .hero-form {
+            justify-content: center;
+        }
+        .hero-form ${HeroFormWrapper} {
+            max-width: 560px;
+        }
+    }
+    @media(max-width:767px) {
+        height: auto;
+        padding: 80px 0;
+        .hero-inner {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "copy"
+                "form";
+            text-align: center;
+        }
+        .hero-content {
+            text-align: center;
+            h1 {
+                font-size: 36px;
+            }
+            p {
+                margin: 12px auto 0 auto;
+                font-size: 24px;
+            }
+        }
+        .hero-form {
+            justify-content: center;
+        }
+        .hero-form ${HeroFormWrapper} {
+            max-width: 100%;
+        }
+    }
+
 `
 
 export default HeroSection
