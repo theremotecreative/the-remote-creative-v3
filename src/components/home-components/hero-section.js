@@ -131,10 +131,11 @@ const HeroFormWrapper = styled.form`
     backdrop-filter: blur(4px);
     color: #fff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    font-family: Poppins, "Roboto", sans-serif;
     .form-header {
         h2 {
             margin: 0;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 800;
         }
         p {
@@ -157,6 +158,7 @@ const HeroFormWrapper = styled.form`
         background: rgba(3, 14, 59, 0.8);
         color: #fff;
         font-size: 16px;
+        font-family: inherit;
         transition: border-color .2s ease, box-shadow .2s ease;
         &:focus {
             border-color: #4f7cff;
@@ -177,6 +179,7 @@ const HeroFormWrapper = styled.form`
         color: #fff;
         font-weight: 700;
         font-size: 16px;
+        font-family: inherit;
         cursor: pointer;
         transition: transform .2s ease, box-shadow .2s ease;
         &:hover:not(:disabled) {
