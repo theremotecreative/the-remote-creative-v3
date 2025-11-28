@@ -107,6 +107,85 @@ const HeroSection = () => {
     )
 }
 
+const HeroForm = styled.form`
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    display: grid;
+    gap: 12px;
+    backdrop-filter: blur(4px);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    .form-header {
+        h2 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 800;
+        }
+        p {
+            margin: 6px 0 0;
+            font-size: 16px;
+            color: #dbe6ff;
+        }
+    }
+    label {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #a9b8ff;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(3, 14, 59, 0.8);
+        color: #fff;
+        font-size: 16px;
+        transition: border-color .2s ease, box-shadow .2s ease;
+        &:focus {
+            border-color: #4f7cff;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(79, 124, 255, 0.2);
+        }
+    }
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+    button {
+        margin-top: 8px;
+        padding: 14px 16px;
+        background: linear-gradient(90deg, #4f7cff, #8e9cff);
+        border: none;
+        border-radius: 12px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        cursor: pointer;
+        transition: transform .2s ease, box-shadow .2s ease;
+        &:hover:not(:disabled) {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px rgba(79, 124, 255, 0.35);
+        }
+        &:disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+    }
+    .form-success {
+        color: #a7ffce;
+        font-weight: 600;
+        margin: 0;
+    }
+    .form-error {
+        color: #ffb4c2;
+        font-weight: 600;
+        margin: 0;
+    }
+`
+
 const HeroMain = styled.section`
     background: #030e3b;
     width: 100%;
