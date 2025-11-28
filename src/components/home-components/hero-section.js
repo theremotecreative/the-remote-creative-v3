@@ -227,8 +227,8 @@ const HeroMain = styled.section`
         h1 {
             font-family: Roboto;
             font-weight: 900;
-            font-size: 72px;
-            line-height: 1.2;
+            font-size: 56px;
+            line-height: 1.15;
             color: #fff;
             max-width: 960px;
             text-shadow: 2px 2px 4px rgba(0,0,0,.5);
@@ -241,8 +241,8 @@ const HeroMain = styled.section`
         p {
             font-family: Poppins;
             font-weight: 400;
-            font-size: 36px;
-            line-height: 1.3;
+            font-size: 24px;
+            line-height: 1.4;
             max-width: 520px;
             margin: 12px 0 0 0;
             color: #fff;
@@ -262,12 +262,14 @@ const HeroMain = styled.section`
             align-items: flex-start;
             gap: 10px;
             color: #e6edff;
-            font-size: 18px;
-            line-height: 1.5;
+            font-family: Poppins;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.55;
         }
         .bullet-icon {
-            font-size: 18px;
-            margin-top: 3px;
+            font-size: 16px;
+            margin-top: 2px;
         }
     }
     .hero-form {
@@ -292,11 +294,11 @@ const HeroMain = styled.section`
         .hero-content {
             text-align: center;
             h1 {
-                font-size: 56px;
+                font-size: 44px;
             }
             p {
                 margin: 12px auto 0 auto;
-                font-size: 32px;
+                font-size: 22px;
             }
         }
         .hero-form {
@@ -319,11 +321,11 @@ const HeroMain = styled.section`
         .hero-content {
             text-align: center;
             h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
             p {
                 margin: 12px auto 0 auto;
-                font-size: 24px;
+                font-size: 20px;
             }
         }
         .hero-form {
