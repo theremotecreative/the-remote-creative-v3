@@ -135,7 +135,7 @@ const HeroFormWrapper = styled.form`
     .form-header {
         h2 {
             margin: 0;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 800;
         }
         p {
