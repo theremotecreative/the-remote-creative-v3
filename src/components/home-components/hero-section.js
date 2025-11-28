@@ -55,14 +55,14 @@ const HeroSection = () => {
             <ParticleBG />
             <div className="hero-inner">
                 <div className="hero-content">
-                    <h1>Senior Developers Supercharged with AI</h1>
-                    <p>We combine years of engineering experience with cutting-edge artificial intelligence to build more.</p>
+                    <h1>Senior developers using AI to ship and scale</h1>
+                    <p>We build websites with AI acceleration and wire up the automations behind them—email capture, lead generation, campaigns, and social media—so your marketing runs on autopilot.</p>
                 </div>
                 <div className="hero-form">
                     <HeroFormWrapper onSubmit={handleSubmit}>
                         <div className="form-header">
-                            <h2>Tell us about your project</h2>
-                            <p>Share your email and a quick project summary and we will follow up with next steps.</p>
+                            <h2>Tell us what to build or automate</h2>
+                            <p>Share your email and a quick summary—web work, marketing automations, or both—and we’ll reply with next steps.</p>
                         </div>
                         <label htmlFor="name">Name</label>
                         <input
@@ -108,6 +108,7 @@ const HeroSection = () => {
 }
 
 const HeroFormWrapper = styled.form`
+    font-family: Poppins, "Segoe UI", Roboto, sans-serif;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
@@ -119,17 +120,20 @@ const HeroFormWrapper = styled.form`
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     .form-header {
         h2 {
+            font-family: Roboto, "Segoe UI", sans-serif;
             margin: 0;
             font-size: 28px;
             font-weight: 800;
         }
         p {
+            font-family: Poppins, "Segoe UI", Roboto, sans-serif;
             margin: 6px 0 0;
             font-size: 16px;
             color: #dbe6ff;
-        }
+            }
     }
     label {
+        font-family: Poppins, "Segoe UI", Roboto, sans-serif;
         font-size: 14px;
         letter-spacing: 0.5px;
         text-transform: uppercase;
@@ -143,6 +147,7 @@ const HeroFormWrapper = styled.form`
         background: rgba(3, 14, 59, 0.8);
         color: #fff;
         font-size: 16px;
+        font-family: Poppins, "Segoe UI", Roboto, sans-serif;
         transition: border-color .2s ease, box-shadow .2s ease;
         &:focus {
             border-color: #4f7cff;
@@ -155,6 +160,7 @@ const HeroFormWrapper = styled.form`
         min-height: 120px;
     }
     button {
+        font-family: Poppins, "Segoe UI", Roboto, sans-serif;
         margin-top: 8px;
         padding: 14px 16px;
         background: linear-gradient(90deg, #4f7cff, #8e9cff);
