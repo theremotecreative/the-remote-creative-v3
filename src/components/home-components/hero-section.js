@@ -55,14 +55,28 @@ const HeroSection = () => {
             <ParticleBG />
             <div className="hero-inner">
                 <div className="hero-content">
-                    <h1>Senior Developers Supercharged with AI</h1>
-                    <p>We combine years of engineering experience with cutting-edge artificial intelligence to build more.</p>
+                    <h1>Your Strategic Partner for AI Development and Automation</h1>
+                    <p>We go beyond building websites. Our team leverages AI to create powerful marketing automations and workflows that help your business scale. Partner with us for:</p>
+                    <ul className="hero-bullets">
+                        <li>
+                            <span className="bullet-icon" aria-hidden="true">✅</span>
+                            <span><strong>AI-Accelerated Web Development:</strong> High-performance websites built faster and smarter.</span>
+                        </li>
+                        <li>
+                            <span className="bullet-icon" aria-hidden="true">✅</span>
+                            <span><strong>Marketing & Ops Automation:</strong> Systems for lead capture, email campaigns, and social media.</span>
+                        </li>
+                        <li>
+                            <span className="bullet-icon" aria-hidden="true">✅</span>
+                            <span><strong>Consulting & Training:</strong> Expert guidance on how to use AI tools as a strategic advantage.</span>
+                        </li>
+                    </ul>
                 </div>
                 <div className="hero-form">
                     <HeroFormWrapper onSubmit={handleSubmit}>
                         <div className="form-header">
-                            <h2>Tell us about your project</h2>
-                            <p>Share your email and a quick project summary and we will follow up with next steps.</p>
+                            <h2>Tell us what you need to build or learn</h2>
+                            <p>Share your email and a quick summary. Whether you need web work, marketing automation, or AI consulting, we will reply with the next steps.</p>
                         </div>
                         <label htmlFor="name">Name</label>
                         <input
@@ -234,6 +248,26 @@ const HeroMain = styled.section`
             color: #fff;
             transform: translateZ(60px);
             text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+        }
+        .hero-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0 0;
+            display: grid;
+            gap: 14px;
+        }
+        .hero-bullets li {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: flex-start;
+            gap: 10px;
+            color: #e6edff;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .bullet-icon {
+            font-size: 18px;
+            margin-top: 3px;
         }
     }
     .hero-form {
