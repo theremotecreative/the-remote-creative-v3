@@ -39,9 +39,12 @@ const SectionTwo = () => {
                 <StrategySlider/>
             </div>
             <div class="right-col">
-                <h2>AI Strategies from Seasoned Developers</h2>
-                <p>Our senior devs blend deep experience with the latest AI techniques to deliver performance, speed, responsiveness, and analytics. These are some of the tools we use to keep every solution on the cutting edge.</p>
-                <p class="custom-button"><a href="#home_contact_row_one">Contact Us to Learn More</a></p>
+                <h2>Engineering Intelligent Business Systems</h2>
+                <p>
+                    Our senior developers blend deep engineering experience with modern AI techniques. We don't just build websites; we build ecosystems. 
+                    From setting up self-optimizing marketing funnels to integrating custom AI agents, we deliver digital solutions that work for you 24/7.
+                </p>
+                <p class="custom-button"><a href="#home_contact_row_one">Start Your Automation Journey</a></p>
             </div>
         </div>
     </SectionMain>
