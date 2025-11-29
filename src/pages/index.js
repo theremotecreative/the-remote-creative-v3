@@ -6,7 +6,6 @@ import Seo from "../components/seo"
 
 import HeroSection from "../components/home-components/hero-section"
 import SectionTwo from "../components/home-components/section-two"
-import PortfolioSection from "../components/home-components/portfolio-section"
 import AboutSection from "../components/home-components/about-section"
 import FaqSection from "../components/home-components/faq-section"
 
@@ -42,7 +41,6 @@ const IndexPage = () => (
   <Layout>
     <HeroSection />
     <SectionTwo />
-    <PortfolioSection />
     <FaqSection faqs={faqItems} />
     <AboutSection />
   </Layout>
@@ -81,7 +79,6 @@ export const Head = () => {
       />
       <HeroSection />
       <SectionTwo />
-      <PortfolioSection />
       <AboutSection />
     </Layout>
   )
