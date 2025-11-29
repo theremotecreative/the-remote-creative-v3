@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ lang, meta, pathname, title, description, keywords, ogTitle, ogDescription, ogImage: ogMetaImage, twitterTitle, twitterDescription, twitterImage: twitterMetaImage  }) {
+function SEO({ lang, meta, pathname, title, description, keywords, ogTitle, ogDescription, ogImage: ogMetaImage, twitterTitle, twitterDescription, twitterImage: twitterMetaImage, faqItems = []  }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -45,6 +45,59 @@ function SEO({ lang, meta, pathname, title, description, keywords, ogTitle, ogDe
   const twitter_image = twitterImage ? twitterImage.src : null
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
 
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: site.siteMetadata.title,
+      url: site.siteMetadata.siteUrl,
+      logo: `${site.siteMetadata.siteUrl}/icons/icon-512x512.png`,
+      description: metaDescription,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      url: site.siteMetadata.siteUrl,
+      name: site.siteMetadata.title,
+      description: metaDescription,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${site.siteMetadata.siteUrl}/?s={search_term_string}`,
+        'query-input': 'required name=search_term_string',
+      },
+    },
+  ]
+
+  if (canonical) {
+    structuredData.push({
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      url: canonical,
+      name: title || site.siteMetadata.title,
+      description: metaDescription,
+    })
+  }
+
+  if (faqItems && faqItems.length > 0) {
+    structuredData.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map(item => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    })
+  }
+
+  const jsonLdScripts = structuredData.map(schema => ({
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify(schema),
+  }))
+
   return (
     <Helmet
       htmlAttributes={{
@@ -62,6 +115,7 @@ function SEO({ lang, meta, pathname, title, description, keywords, ogTitle, ogDe
             ]
           : []
       }
+      script={jsonLdScripts}
       meta={[
         {
           name: `description`,
@@ -167,6 +221,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  faqItems: [],
 }
 
 SEO.propTypes = {
@@ -181,6 +236,12 @@ SEO.propTypes = {
   twitterDescription: PropTypes.string,
   twitterImage: PropTypes.object,
   pathname: PropTypes.string,
+  faqItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      question: PropTypes.string.isRequired,
+      answer: PropTypes.string.isRequired,
+    })
+  ),
 }
 
 export default SEO
