@@ -27,28 +27,32 @@ class StrategySlider extends Component {
               <Slider {...settings}>
                 <StrategySlide>
                     <SiWordpress size={72}/>
-                    <h4>WordPress Dev with Codex</h4>
-                    <p>Write and customize WordPress sites using the Codex tool for faster, code-assisted development.</p>
+                    <h4>AI-Enhanced CMS</h4>
+                    <p>We supercharge platforms like WordPress with Generative AI integrations. Scale your content production and automate SEO metadata without writing a single line of code manually.</p>
                 </StrategySlide>
+
                 <StrategySlide>
                     <IoRocket size={72}/>
-                    <h4>GSAP Animations</h4>
-                    <p><a href="https://greensock.com/" target="_blank" rel="noopener noreferrer">GreenSock</a> is an advanced JavaScript library made for animations with a focus on maintaining performance. Enhance your website with interactive graphics, scroll-trigger effects, and animated SVGs and Canvases.</p>
+                    <h4>Marketing Automation</h4>
+                    <p>Launch campaigns that run on autopilot. We wire up your website to your email and CRM tools, ensuring every lead is captured, qualified, and nurtured instantly.</p>
                 </StrategySlide>
+
                 <StrategySlide>
                     <GrTest size={72}/>
-                    <h4>A/B Testing</h4>
-                    <p>Use split testing to determine which content on your site engages the most users. Reduce bounce rates, increase conversion rates, and most importantly, improve your content!</p>
+                    <h4>Smart Optimization</h4>
+                    <p>Stop guessing what works. We use data-driven split testing to determine which AI-generated copy and layouts drive the most revenue for your business.</p>
                 </StrategySlide>
+
                 <StrategySlide>
                     <IoMdAnalytics size={72}/>
-                    <h4>Analytics</h4>
-                    <p>Better understand the behavior of users on your site. Learn where your users come from, how you rank in search engines, peak usage times, and use this information to improve your marketing and discover your target audience.</p>
+                    <h4>Predictive Insights</h4>
+                    <p>Go beyond basic page views. We implement advanced tracking that feeds into AI models, helping you understand user behavior and predict future market trends.</p>
                 </StrategySlide>
+
                 <StrategySlide>
                     <IoLogoPwa size={72}/>
-                    <h4>Progressive Web Apps</h4>
-                    <p>Give your website the ability to behave like a Native App, making it quick and easy to install, perform better on mobile devices, and work anywhere, even while offline.</p>
+                    <h4>Custom AI Tools</h4>
+                    <p>Need a specialized tool? We build custom web applications and AI agents that behave like native apps, working seamlessly across mobile and desktop devices.</p>
                 </StrategySlide>  
               </Slider>
             </SliderContainer>
