@@ -34,17 +34,42 @@ const SectionTwo = () => {
 
     return(
     <SectionMain id="section_two_bg" className="two-bg-change">
-        <div class="flex-row">
-            <div class="left-col">
+        <div className="flex-row">
+            <div className="left-col">
                 <StrategySlider/>
             </div>
-            <div class="right-col">
-                <h2>Engineering Intelligent Business Systems</h2>
+            <div className="right-col">
+                <h2>Services built around faster launches and better conversions</h2>
                 <p>
-                    Our senior developers blend deep engineering experience with modern AI techniques. We don't just build websites; we build ecosystems. 
-                    From setting up self-optimizing marketing funnels to integrating custom AI agents, we deliver digital solutions that work for you 24/7.
+                    Every engagement focuses on speed-to-value. We clarify your outcomes, build in short iterations, and leave you with systems your team can run confidently.
                 </p>
-                <p class="custom-button"><a href="#home_contact_row_one">Start Your Automation Journey</a></p>
+                <div className="service-list">
+                    <div className="service-card">
+                        <h3>AI-accelerated web development</h3>
+                        <ul>
+                            <li>Performance-first sites ready for SEO, analytics, and experimentation.</li>
+                            <li>Design systems and content pipelines that keep pages fresh without rework.</li>
+                            <li>Built-in CRO testing to capture more qualified leads after launch.</li>
+                        </ul>
+                    </div>
+                    <div className="service-card">
+                        <h3>Marketing & ops automation</h3>
+                        <ul>
+                            <li>Lead capture, scoring, and routing that syncs with your CRM and inbox.</li>
+                            <li>Campaign sequences, chatbots, and follow-ups that run automatically.</li>
+                            <li>Dashboards that track time saved, conversion lift, and revenue impact.</li>
+                        </ul>
+                    </div>
+                    <div className="service-card">
+                        <h3>Consulting & training</h3>
+                        <ul>
+                            <li>Roadmaps and architectures tailored to your stack and security needs.</li>
+                            <li>Workshops and playbooks so your team can ship AI features responsibly.</li>
+                            <li>Pairing sessions to productionize prototypes and avoid common pitfalls.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p className="custom-button"><a href="#home_contact_row_one">Plan my AI upgrade</a></p>
             </div>
         </div>
     </SectionMain>
@@ -83,6 +108,34 @@ const SectionMain = styled.section`
         color: #fff;
         line-height: 1.5;
     }
+    h3 {
+        font-family: Roboto;
+        font-size: 22px;
+        font-weight: 800;
+        color: #fff;
+        margin: 0 0 12px;
+    }
+    .service-list {
+        display: grid;
+        gap: 18px;
+        margin: 26px 0;
+    }
+    .service-card {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 18px 20px;
+        background: rgba(255, 255, 255, 0.03);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    }
+    .service-card ul {
+        margin: 0;
+        padding-left: 18px;
+        color: #dbe6ff;
+        font-size: 16px;
+        line-height: 1.6;
+        display: grid;
+        gap: 8px;
+    }
     .custom-button {
         a {
             color: #00ffff;
@@ -103,6 +156,9 @@ const SectionMain = styled.section`
         }
         .left-col {
             order: 2;
+        }
+        .service-card {
+            text-align: left;
         }
     }
     @media(max-width:767px) {

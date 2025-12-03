@@ -8,6 +8,7 @@ import HeroSection from "../components/home-components/hero-section"
 import SectionTwo from "../components/home-components/section-two"
 import AboutSection from "../components/home-components/about-section"
 import FaqSection from "../components/home-components/faq-section"
+import SocialProofSection from "../components/home-components/social-proof-section"
 
 const faqItems = [
   {
@@ -41,6 +42,7 @@ const IndexPage = () => (
   <Layout>
     <HeroSection />
     <SectionTwo />
+    <SocialProofSection />
     <FaqSection faqs={faqItems} />
     <AboutSection />
   </Layout>

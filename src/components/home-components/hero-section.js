@@ -55,28 +55,32 @@ const HeroSection = () => {
             <ParticleBG />
             <div className="hero-inner">
                 <div className="hero-content">
-                    <h1>Your Strategic Partner for AI Development and Automation</h1>
-                    <p>We go beyond building websites. Our team leverages AI to create powerful marketing automations and workflows that help your business scale. Partner with us for:</p>
+                    <h1>Turn AI Automation into Revenue-Generating Workflows</h1>
+                    <p>We build and automate the web experiences that close deals for you—without adding headcount or forcing your team up a steep AI learning curve.</p>
                     <ul className="hero-bullets">
                         <li>
                             <span className="bullet-icon" aria-hidden="true">✅</span>
-                            <span><strong>AI-Accelerated Web Development:</strong> High-performance websites built faster and smarter.</span>
+                            <span><strong>AI-Accelerated Web Development:</strong> Ship conversion-focused sites faster with clean code, analytics, and CRO baked in.</span>
                         </li>
                         <li>
                             <span className="bullet-icon" aria-hidden="true">✅</span>
-                            <span><strong>Marketing & Ops Automation:</strong> Systems for lead capture, email campaigns, and social media.</span>
+                            <span><strong>Marketing & Ops Automation:</strong> Capture, qualify, and nurture leads automatically so your team focuses on closing.</span>
                         </li>
                         <li>
                             <span className="bullet-icon" aria-hidden="true">✅</span>
-                            <span><strong>Consulting & Training:</strong> Expert guidance on how to use AI tools as a strategic advantage.</span>
+                            <span><strong>Consulting & Training:</strong> Playbooks, workshops, and co-building sessions that help your staff ship with confidence.</span>
+                        </li>
+                        <li>
+                            <span className="bullet-icon" aria-hidden="true">✅</span>
+                            <span><strong>Measurable Outcomes:</strong> Faster launch cycles, higher lead quality, and automation that pays for itself.</span>
                         </li>
                     </ul>
                 </div>
                 <div className="hero-form">
                     <HeroFormWrapper onSubmit={handleSubmit}>
                         <div className="form-header">
-                            <h2>Tell us what you need to build or learn</h2>
-                            <p>Share your email and a quick summary. Whether you need web work, marketing automation, or AI consulting, we will reply with the next steps.</p>
+                            <h2>Get a free AI project consultation</h2>
+                            <p>Tell us what outcome you need—more qualified leads, faster launches, or a smarter workflow—and we'll propose a plan within one business day.</p>
                         </div>
                         <label htmlFor="name">Name</label>
                         <input
@@ -102,15 +106,16 @@ const HeroSection = () => {
                         <textarea
                             id="project"
                             name="project"
-                            placeholder="What problem can we help you solve?"
+                            placeholder="e.g., Build an AI-ready marketing site or automate lead routing from HubSpot"
                             value={formData.project}
                             onChange={(event) => setFormData({ ...formData, project: event.target.value })}
                             rows="4"
                             required
                         />
                         <button type="submit" disabled={status === "submitting"}>
-                            {status === "submitting" ? "Sending..." : "Send to our team"}
+                            {status === "submitting" ? "Sending..." : "Get your AI game plan"}
                         </button>
+                        <p className="privacy-note">We’ll never share your information. We only use it to respond to your request.</p>
                         {status === "success" && <p className="form-success">Thanks! We'll reach out shortly.</p>}
                         {errorMessage && <p className="form-error">{errorMessage}</p>}
                     </HeroFormWrapper>
@@ -190,6 +195,11 @@ const HeroFormWrapper = styled.form`
             cursor: not-allowed;
             opacity: 0.7;
         }
+    }
+    .privacy-note {
+        margin: 0;
+        font-size: 13px;
+        color: #cfd8ff;
     }
     .form-success {
         color: #a7ffce;
