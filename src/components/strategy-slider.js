@@ -27,32 +27,32 @@ class StrategySlider extends Component {
               <Slider {...settings}>
                 <StrategySlide>
                     <SiWordpress size={72}/>
-                    <h4>AI-Enhanced CMS</h4>
-                    <p>We supercharge platforms like WordPress with Generative AI integrations. Scale your content production and automate SEO metadata without writing a single line of code manually.</p>
+                    <h4>Web Development Studio</h4>
+                    <p>We design and build modern websites for brands, founders, and growing businesses that need performance, clarity, and speed.</p>
                 </StrategySlide>
 
                 <StrategySlide>
                     <IoRocket size={72}/>
-                    <h4>Marketing Automation</h4>
-                    <p>Launch campaigns that run on autopilot. We wire up your website to your email and CRM tools, ensuring every lead is captured, qualified, and nurtured instantly.</p>
+                    <h4>ScalarOps Agency</h4>
+                    <p>Our AI automation and marketing service helps teams scale outreach, reporting, and content workflows. Visit <a href="https://scalarops.agency" target="_blank" rel="noreferrer">scalarops.agency</a> to learn more.</p>
                 </StrategySlide>
 
                 <StrategySlide>
                     <GrTest size={72}/>
-                    <h4>Smart Optimization</h4>
-                    <p>Stop guessing what works. We use data-driven split testing to determine which AI-generated copy and layouts drive the most revenue for your business.</p>
+                    <h4>Merchandise Commerce</h4>
+                    <p>We publish original apparel designs and manage on-demand fulfillment through our Redbubble storefront.</p>
                 </StrategySlide>
 
                 <StrategySlide>
                     <IoMdAnalytics size={72}/>
-                    <h4>Predictive Insights</h4>
-                    <p>Go beyond basic page views. We implement advanced tracking that feeds into AI models, helping you understand user behavior and predict future market trends.</p>
+                    <h4>Events & Experiences</h4>
+                    <p>We are exploring a party planning service designed for memorable, well-organized celebrations.</p>
                 </StrategySlide>
 
                 <StrategySlide>
                     <IoLogoPwa size={72}/>
-                    <h4>Custom AI Tools</h4>
-                    <p>Need a specialized tool? We build custom web applications and AI agents that behave like native apps, working seamlessly across mobile and desktop devices.</p>
+                    <h4>Future Partnerships</h4>
+                    <p>We collaborate with creators, agencies, and operators to launch new ventures that align with our portfolio.</p>
                 </StrategySlide>  
               </Slider>
             </SliderContainer>

@@ -1,6 +1,4 @@
 import React, { useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 import gsap from "gsap"
@@ -16,7 +14,7 @@ const AboutSection = () => {
     let sFourTl = gsap.timeline({
       paused: true,
       scrollTrigger: {
-        trigger: "#home_contact_row_one",
+        trigger: "#portfolio-overview",
         start: "top 70%",
         end: "top 70%",
         id: "s4-background",
@@ -44,81 +42,67 @@ const AboutSection = () => {
       0,
     )
 
-    let contacttl = gsap.timeline({
+    let overviewTl = gsap.timeline({
       paused: true,
       scrollTrigger: {
-        trigger: "#home_contact_row_one",
+        trigger: "#portfolio-overview",
         start: "top bottom",
         end: "bottom top",
-        id: "home_contact_row_one",
+        id: "portfolio-overview",
         toggleActions: "play reverse play reverse",
       },
     })
-    contacttl.to(".contact-fadein", { opacity: "1", delay: 0.2, duration: 2 })
+    overviewTl.to(".overview-fadein", { opacity: "1", delay: 0.2, duration: 2 })
   }, [])
 
-  const data = useStaticQuery(graphql`
-    query {
-      jasonThumb: file(relativePath: { eq: "Jason-Vanderheyden.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 800
-            placeholder: TRACED_SVG
-            formats: [AUTO, WEBP, AVIF]
-          )
-        }
-      }
-    }
-  `)
-
   return (
-    <SectionMain id="home_contact_row_one" className="four-bg-change">
-      <ContactRow className={"contact-fadein"}>
+    <SectionMain id="portfolio-overview" className="four-bg-change">
+      <ContactRow className={"overview-fadein"}>
         <CopyCol>
           <h2>
             About <br />
-            <span>the creative</span>
+            <span>our portfolio</span>
           </h2>
           <p>
-            Jason is a senior developer with over a decade of experience
-            building full-stack web solutions. He pairs deep development
-            expertise with AI-driven consulting, leads AI workshops, and has
-            managed cross-functional web teams, blending project management with
-            technologies from WordPress to React. Jason is an Iraq War veteran
-            with a Masters Degree from the University of Oklahoma, is a
-            self-taught coder, and is the founder and CEO of The Remote
-            Creative.
+            The Remote Creative LLC is a parent company that owns and operates
+            multiple projects. We focus on building dependable digital
+            experiences, launching new service lines, and supporting each
+            venture with a shared operations backbone.
           </p>
-          <p>Toolkit:</p>
+          <p>
+            Our current initiatives span client web development, AI automation
+            and marketing through ScalarOps, ecommerce merchandise, and a party
+            planning concept in incubation.
+          </p>
+          <p>How we think:</p>
           <Toolkit>
-            <p class="lang">HTML</p>
-            <p class="lang">CSS</p>
-            <p class="lang">JavaScript</p>
-            <p class="lang">PHP</p>
-            <p class="frame">React</p>
-            <p class="frame">TensorFlow</p>
-            <p class="frame">GreenSock</p>
-            <p class="cms">WordPress</p>
-            <p class="cms">WooCommerce</p>
-            <p class="cms">Squarespace</p>
-            <p class="cms">Shopify</p>
-            <p class="builder">Elementor</p>
-            <p class="builder">WPbakery</p>
-            <p class="builder">Avada</p>
-            <p class="design">Adobe XD</p>
-            <p class="design">Inkscape</p>
-            <p class="proj">Trello</p>
-            <p class="proj">Slack</p>
+            <p className="lang">Portfolio-first operations</p>
+            <p className="frame">Repeatable systems</p>
+            <p className="cms">Customer-focused delivery</p>
+            <p className="builder">Automation where it counts</p>
+            <p className="design">Simple, scalable design</p>
+            <p className="proj">Fast iteration cycles</p>
           </Toolkit>
         </CopyCol>
         <ImageCol>
-          <JasonImg
-            image={data.jasonThumb.childImageSharp.gatsbyImageData}
-            alt={"Jason Vanderheyden"}
-          />
-          <h3>Jason Vanderheyden</h3>
-          <p>Contact Me:</p>
-          <p>jason@theremotecreative.com</p>
+          <h3>Active initiatives</h3>
+          <InitiativeCard>
+            <h4>ScalarOps Agency</h4>
+            <p>AI automation and marketing services.</p>
+            <a href="https://scalarops.agency" target="_blank" rel="noreferrer">scalarops.agency</a>
+          </InitiativeCard>
+          <InitiativeCard>
+            <h4>Web development studio</h4>
+            <p>Custom websites and web experiences for clients.</p>
+          </InitiativeCard>
+          <InitiativeCard>
+            <h4>Redbubble merchandise</h4>
+            <p>Original T-shirt designs in our online storefront.</p>
+          </InitiativeCard>
+          <InitiativeCard>
+            <h4>Party planning (in development)</h4>
+            <p>Upcoming service focused on curated celebrations.</p>
+          </InitiativeCard>
         </ImageCol>
       </ContactRow>
     </SectionMain>
@@ -237,7 +221,7 @@ const ImageCol = styled.div`
     font-family: "Poppins";
     font-size: 27px;
     color: #fff;
-    font-weight: 100;
+    font-weight: 600;
     margin-top: 20px;
     margin-bottom: 0px;
     line-height: 1.3em;
@@ -253,14 +237,27 @@ const ImageCol = styled.div`
   }
 `
 
-const JasonImg = styled(GatsbyImage)`
-  height: 384px;
-  width: 384px;
-  border-radius: 50%;
-  margin: 0 auto;
-  @media (max-width: 450px) {
-    height: 200px;
-    width: 200px;
+const InitiativeCard = styled.div`
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  text-align: left;
+  h4 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #fff;
+    font-family: "Poppins";
+  }
+  p {
+    margin: 0 0 8px;
+    color: #d9e4ff;
+  }
+  a {
+    color: #7adeff;
+    text-decoration: none;
+    font-weight: 600;
   }
 `
 
