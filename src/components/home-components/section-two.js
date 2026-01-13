@@ -34,17 +34,18 @@ const SectionTwo = () => {
 
     return(
     <SectionMain id="section_two_bg" className="two-bg-change">
-        <div class="flex-row">
-            <div class="left-col">
+        <div className="flex-row">
+            <div className="left-col">
                 <StrategySlider/>
             </div>
-            <div class="right-col">
-                <h2>Engineering Intelligent Business Systems</h2>
+            <div className="right-col">
+                <h2>A portfolio approach to building new revenue lines</h2>
                 <p>
-                    Our senior developers blend deep engineering experience with modern AI techniques. We don't just build websites; we build ecosystems. 
-                    From setting up self-optimizing marketing funnels to integrating custom AI agents, we deliver digital solutions that work for you 24/7.
+                    The Remote Creative LLC is structured to launch, operate, and support multiple business units under one roof. Each project has a focused mission, dedicated workflows, and a shared commitment to high-quality digital experiences.
                 </p>
-                <p class="custom-button"><a href="#home_contact_row_one">Start Your Automation Journey</a></p>
+                <p>
+                    Our current focus spans web development, AI automation and marketing through ScalarOps, original merch on Redbubble, and a party planning concept in early development.
+                </p>
             </div>
         </div>
     </SectionMain>

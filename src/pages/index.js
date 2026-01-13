@@ -11,29 +11,29 @@ import FaqSection from "../components/home-components/faq-section"
 
 const faqItems = [
   {
-    question: "What kinds of projects do you take on?",
+    question: "What does The Remote Creative LLC do?",
     answer:
-      "We build high-performance marketing sites, automation systems for lead capture and outreach, custom AI agents, and training programs so your team can operate and extend what we deliver.",
+      "We operate a portfolio of projects that includes a web development studio, an AI automation and marketing service, a merchandise storefront, and new service ideas in development.",
   },
   {
-    question: "Do you work with existing tools and data?",
+    question: "Where can I learn about your AI automation service?",
     answer:
-      "Yes. We integrate with your CRM, analytics stack, knowledge bases, and marketing automations so new AI features and workflows keep your current systems as the source of truth.",
+      "Our AI automation and marketing service is branded as ScalarOps Agency, and the main site is at scalarops.agency.",
   },
   {
-    question: "How do engagements work across time zones?",
+    question: "Are you still available for web development work?",
     answer:
-      "Our senior developers are remote-first. We set a weekly cadence for demos, async status, and decision-making so you always know what shipped and what's next.",
+      "Yes. We continue to build websites and digital experiences for clients alongside our owned projects.",
   },
   {
-    question: "Can you coach our team on AI tools?",
+    question: "Do you sell physical products?",
     answer:
-      "We run workshops and pair-with-your-team sessions that cover prompt design, workflow automation, and governance so your staff can ship AI-backed features confidently.",
+      "We offer original T-shirt designs through our Redbubble storefront as part of our merchandise line.",
   },
   {
-    question: "How do we get started?",
+    question: "Are there new projects on the horizon?",
     answer:
-      "Share your goals in the contact form and we'll reply with a short scope, suggested architecture, and a kickoff path tailored to your budget and timeline.",
+      "We are exploring a party planning service and additional collaborations that align with our portfolio strategy.",
   },
 ]
 
@@ -67,13 +67,13 @@ export const Head = () => {
     <Layout>
       <Seo
         title={"Home | The Remote Creative"}
-        description={"Senior developers delivering AI‑enhanced web and app solutions."}
-        keywords={"senior developers, AI development, AI consulting, machine learning, automation, web development"}
+        description={"The Remote Creative LLC operates a portfolio of web, AI automation, and creative ventures."}
+        keywords={"The Remote Creative LLC, portfolio company, web development, AI automation, marketing, merch, Redbubble"}
         ogTitle={"Home | The Remote Creative"}
-        ogDescription={"Senior developers delivering AI‑enhanced web and app solutions."}
+        ogDescription={"The Remote Creative LLC operates a portfolio of web, AI automation, and creative ventures."}
         ogImage={data.jasonThumb.childImageSharp.gatsbyImageData}
         twitterTitle={"Home | The Remote Creative"}
-        twitterDescription={"Senior developers delivering AI‑enhanced web and app solutions."}
+        twitterDescription={"The Remote Creative LLC operates a portfolio of web, AI automation, and creative ventures."}
         twitterImage={data.jasonThumb.childImageSharp.gatsbyImageData}
         faqItems={faqItems}
       />

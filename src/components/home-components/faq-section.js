@@ -48,10 +48,10 @@ const FaqSection = ({ faqs }) => {
     <Section id="faq" className="four-bg-change">
       <div className="container">
         <header className="heading">
-          <p className="eyebrow">Answers for decision makers</p>
+          <p className="eyebrow">Quick context</p>
           <h2>Frequently asked questions</h2>
           <p className="lede">
-            Clear answers about how we deliver AI-enabled web builds, automation systems, and hands-on training.
+            Learn how The Remote Creative LLC organizes its portfolio and where to find each initiative.
           </p>
         </header>
         <div className="faq-grid">
