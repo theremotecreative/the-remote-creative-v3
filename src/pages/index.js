@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 import HeroSection from "../components/home-components/hero-section"
-import SectionTwo from "../components/home-components/section-two"
 import AboutSection from "../components/home-components/about-section"
 import FaqSection from "../components/home-components/faq-section"
 
@@ -40,7 +39,6 @@ const faqItems = [
 const IndexPage = () => (
   <Layout>
     <HeroSection />
-    <SectionTwo />
     <FaqSection faqs={faqItems} />
     <AboutSection />
   </Layout>
@@ -78,7 +76,6 @@ export const Head = () => {
         faqItems={faqItems}
       />
       <HeroSection />
-      <SectionTwo />
       <AboutSection />
     </Layout>
   )
