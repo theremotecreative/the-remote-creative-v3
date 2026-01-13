@@ -55,16 +55,16 @@ class Header extends Component {
                 </li>
                 <li>
                 <Link
-                  to="/#section_two_bg"
+                  to="/#portfolio-overview"
                 >
-                  AI Services
+                  Portfolio Overview
                 </Link>
                 </li>
                 <li>
                 <Link
-                  to="/#home_contact_row_one"
+                  to="/#faq"
                 >
-                  Contact
+                  FAQ
                 </Link>
                 </li>
               </ul>

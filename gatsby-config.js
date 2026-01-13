@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `The Remote Creative`,
-    description: `Senior developers with 10+ years of experience delivering AI-enhanced web apps, workshops, and project management services.`,
-    keywords: `senior developers, AI development, AI consulting, machine learning, automation, web development, WordPress, React, project management, AI workshops, web team leadership`,
+    description: `The Remote Creative LLC operates a portfolio of web, AI automation, and creative ventures.`,
+    keywords: `The Remote Creative LLC, portfolio company, web development, AI automation, marketing, merch, Redbubble, party planning`,
     author: `@theremotecreative`,
     siteUrl: `https://theremotecreative.com`,
   },

@@ -32,13 +32,13 @@ export const Head = () => {
     <SubLayout>
       <Seo
         title={"Project Portfolio | The Remote Creative"}
-        description={"Senior developers delivering AI‑enhanced web and app solutions. View our latest projects and contact us to work together."}
-        keywords={"senior developers, AI development, AI consulting, machine learning, automation, web development"}
+        description={"A look at select digital projects delivered by The Remote Creative LLC."}
+        keywords={"project portfolio, web development, digital experiences, The Remote Creative LLC"}
         ogTitle={"Project Portfolio | The Remote Creative"}
-        ogDescription={"Senior developers delivering AI‑enhanced web and app solutions. View our latest projects and contact us to work together."}
+        ogDescription={"A look at select digital projects delivered by The Remote Creative LLC."}
         ogImage={data.jasonThumb.childImageSharp.gatsbyImageData}
         twitterTitle={"Project Portfolio | The Remote Creative"}
-        twitterDescription={"Senior developers delivering AI‑enhanced web and app solutions. View our latest projects and contact us to work together."}
+        twitterDescription={"A look at select digital projects delivered by The Remote Creative LLC."}
         twitterImage={data.jasonThumb.childImageSharp.gatsbyImageData}
       />
       <FeaturedPortfolio/>

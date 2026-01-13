@@ -2,206 +2,43 @@ import * as React from "react"
 import styled from "styled-components"
 
 import ParticleBG from "./hero-bg"
-import HeroAnimation from "./hero-animation"
 
-const HeroSection = () => {
-    const [formData, setFormData] = React.useState({
-        name: "",
-        email: "",
-        project: "",
-    })
-    const [status, setStatus] = React.useState("idle")
-    const [errorMessage, setErrorMessage] = React.useState("")
-
-    const webhookUrl = process.env.GATSBY_N8N_WEBHOOK_URL
-
-    const handleSubmit = async (event) => {
-        event.preventDefault()
-        setStatus("submitting")
-        setErrorMessage("")
-
-        if (!webhookUrl) {
-            setErrorMessage("Missing webhook configuration. Add GATSBY_N8N_WEBHOOK_URL to your environment.")
-            setStatus("idle")
-            return
-        }
-
-        try {
-            const response = await fetch(webhookUrl, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    ...formData,
-                    source: "hero-contact",
-                }),
-            })
-
-            if (!response.ok) {
-                throw new Error("Webhook request failed")
-            }
-
-            setStatus("success")
-            setFormData({ name: "", email: "", project: "" })
-        } catch (error) {
-            setErrorMessage("We couldn't send your details right now. Please try again.")
-            setStatus("error")
-        }
-    }
-
-    return (
-        <HeroMain id="hero_main_bg" className="one-bg-change">
-            <ParticleBG />
-            <div className="hero-inner">
-                <div className="hero-content">
-                    <h1>Your Strategic Partner for AI Development and Automation</h1>
-                    <p>We go beyond building websites. Our team leverages AI to create powerful marketing automations and workflows that help your business scale. Partner with us for:</p>
-                    <ul className="hero-bullets">
-                        <li>
-                            <span className="bullet-icon" aria-hidden="true">✅</span>
-                            <span><strong>AI-Accelerated Web Development:</strong> High-performance websites built faster and smarter.</span>
-                        </li>
-                        <li>
-                            <span className="bullet-icon" aria-hidden="true">✅</span>
-                            <span><strong>Marketing & Ops Automation:</strong> Systems for lead capture, email campaigns, and social media.</span>
-                        </li>
-                        <li>
-                            <span className="bullet-icon" aria-hidden="true">✅</span>
-                            <span><strong>Consulting & Training:</strong> Expert guidance on how to use AI tools as a strategic advantage.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div className="hero-form">
-                    <HeroFormWrapper onSubmit={handleSubmit}>
-                        <div className="form-header">
-                            <h2>Tell us what you need to build or learn</h2>
-                            <p>Share your email and a quick summary. Whether you need web work, marketing automation, or AI consulting, we will reply with the next steps.</p>
-                        </div>
-                        <label htmlFor="name">Name</label>
-                        <input
-                            id="name"
-                            name="name"
-                            type="text"
-                            placeholder="Your name"
-                            value={formData.name}
-                            onChange={(event) => setFormData({ ...formData, name: event.target.value })}
-                            required
-                        />
-                        <label htmlFor="email">Email</label>
-                        <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            placeholder="you@example.com"
-                            value={formData.email}
-                            onChange={(event) => setFormData({ ...formData, email: event.target.value })}
-                            required
-                        />
-                        <label htmlFor="project">Project details</label>
-                        <textarea
-                            id="project"
-                            name="project"
-                            placeholder="What problem can we help you solve?"
-                            value={formData.project}
-                            onChange={(event) => setFormData({ ...formData, project: event.target.value })}
-                            rows="4"
-                            required
-                        />
-                        <button type="submit" disabled={status === "submitting"}>
-                            {status === "submitting" ? "Sending..." : "Send to our team"}
-                        </button>
-                        {status === "success" && <p className="form-success">Thanks! We'll reach out shortly.</p>}
-                        {errorMessage && <p className="form-error">{errorMessage}</p>}
-                    </HeroFormWrapper>
-                </div>
+const HeroSection = () => (
+    <HeroMain id="hero_main_bg" className="one-bg-change">
+        <ParticleBG />
+        <div className="hero-inner">
+            <div className="hero-content">
+                <p className="eyebrow">The Remote Creative LLC</p>
+                <h1>We build and operate a growing portfolio of digital ventures.</h1>
+                <p>
+                    Our LLC runs multiple projects across web development, AI automation and marketing, e-commerce merchandise, and emerging service ideas. We stay lean, move fast, and back each initiative with thoughtful design and reliable execution.
+                </p>
+                <ul className="hero-bullets">
+                    <li>
+                        <span className="bullet-icon" aria-hidden="true">◆</span>
+                        <span><strong>Web development studio</strong> delivering modern, conversion-ready sites.</span>
+                    </li>
+                    <li>
+                        <span className="bullet-icon" aria-hidden="true">◆</span>
+                        <span><strong>ScalarOps Agency</strong> for AI automation & marketing at <a href="https://scalarops.agency" target="_blank" rel="noreferrer">scalarops.agency</a>.</span>
+                    </li>
+                    <li>
+                        <span className="bullet-icon" aria-hidden="true">◆</span>
+                        <span><strong>Merchandise storefront</strong> featuring original T-shirt designs on Redbubble.</span>
+                    </li>
+                    <li>
+                        <span className="bullet-icon" aria-hidden="true">◆</span>
+                        <span><strong>Party planning services</strong> currently in exploration.</span>
+                    </li>
+                </ul>
+                <p className="hero-link">
+                    <a href="#portfolio-overview">See how our portfolio is organized ↓</a>
+                </p>
             </div>
-            {/* <HeroAnimation/> */}
-        </HeroMain>
-    )
-}
-
-const HeroFormWrapper = styled.form`
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 24px;
-    display: grid;
-    gap: 12px;
-    backdrop-filter: blur(4px);
-    color: #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-    font-family: Poppins, "Roboto", sans-serif;
-    .form-header {
-        h2 {
-            margin: 0;
-            font-size: 24px;
-            font-weight: 800;
-        }
-        p {
-            margin: 6px 0 0;
-            font-size: 16px;
-            color: #dbe6ff;
-        }
-    }
-    label {
-        font-size: 14px;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        color: #a9b8ff;
-    }
-    input, textarea {
-        width: 100%;
-        padding: 12px 14px;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background: rgba(3, 14, 59, 0.8);
-        color: #fff;
-        font-size: 16px;
-        font-family: inherit;
-        transition: border-color .2s ease, box-shadow .2s ease;
-        &:focus {
-            border-color: #4f7cff;
-            outline: none;
-            box-shadow: 0 0 0 4px rgba(79, 124, 255, 0.2);
-        }
-    }
-    textarea {
-        resize: vertical;
-        min-height: 120px;
-    }
-    button {
-        margin-top: 8px;
-        padding: 14px 16px;
-        background: linear-gradient(90deg, #4f7cff, #8e9cff);
-        border: none;
-        border-radius: 12px;
-        color: #fff;
-        font-weight: 700;
-        font-size: 16px;
-        font-family: inherit;
-        cursor: pointer;
-        transition: transform .2s ease, box-shadow .2s ease;
-        &:hover:not(:disabled) {
-            transform: translateY(-1px);
-            box-shadow: 0 8px 20px rgba(79, 124, 255, 0.35);
-        }
-        &:disabled {
-            cursor: not-allowed;
-            opacity: 0.7;
-        }
-    }
-    .form-success {
-        color: #a7ffce;
-        font-weight: 600;
-        margin: 0;
-    }
-    .form-error {
-        color: #ffb4c2;
-        font-weight: 600;
-        margin: 0;
-    }
-`
+        </div>
+        {/* <HeroAnimation/> */}
+    </HeroMain>
+)
 
 const HeroMain = styled.section`
     background: #030e3b;
@@ -211,22 +48,26 @@ const HeroMain = styled.section`
     align-items: center;
     .hero-inner {
         position: relative;
-        max-width: 1200px;
+        max-width: 980px;
         width: 100%;
         margin: 0 auto;
         padding: 0 30px;
         z-index: 1;
-        display: grid;
-        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-        grid-template-areas: "copy form";
-        gap: 32px;
-        align-items: center;
     }
     .hero-content {
-        grid-area: copy;
         transition-duration: .5s;
         text-align: left;
-        max-width: 600px;
+        max-width: 820px;
+        color: #fff;
+        font-family: "Poppins", "Roboto", sans-serif;
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #7adeff;
+            margin: 0 0 16px;
+        }
         h1 {
             font-family: Roboto;
             font-weight: 900;
@@ -274,26 +115,18 @@ const HeroMain = styled.section`
             font-size: 16px;
             margin-top: 2px;
         }
-    }
-    .hero-form {
-        grid-area: form;
-        display: flex;
-        justify-content: flex-end;
-    }
-    .hero-form ${HeroFormWrapper} {
-        width: 100%;
-        max-width: 520px;
+        a {
+            color: #7adeff;
+            text-decoration: none;
+        }
+        .hero-link {
+            margin-top: 20px;
+            font-size: 18px;
+        }
     }
     @media(max-width:960px) {
         height: auto;
         padding: 80px 0;
-        .hero-inner {
-            grid-template-columns: 1fr;
-            grid-template-areas:
-                "copy"
-                "form";
-            text-align: center;
-        }
         .hero-content {
             text-align: center;
             h1 {
@@ -304,23 +137,10 @@ const HeroMain = styled.section`
                 font-size: 22px;
             }
         }
-        .hero-form {
-            justify-content: center;
-        }
-        .hero-form ${HeroFormWrapper} {
-            max-width: 560px;
-        }
     }
     @media(max-width:767px) {
         height: auto;
         padding: 80px 0;
-        .hero-inner {
-            grid-template-columns: 1fr;
-            grid-template-areas:
-                "copy"
-                "form";
-            text-align: center;
-        }
         .hero-content {
             text-align: center;
             h1 {
@@ -330,12 +150,6 @@ const HeroMain = styled.section`
                 margin: 12px auto 0 auto;
                 font-size: 20px;
             }
-        }
-        .hero-form {
-            justify-content: center;
-        }
-        .hero-form ${HeroFormWrapper} {
-            max-width: 100%;
         }
     }
 
